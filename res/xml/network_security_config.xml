@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--禁用掉明文流量请求的检查-->
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>
+<!--这段 XML 代码定义了一个 Android 网络安全配置文件（network-security-config），
+它用于控制应用程序如何与网络资源进行安全通信。具体来说，<base-config cleartextTraffi
+cPermitted="true" /> 这一行是用来配置应用是否允许使用明文流量（即未加密的 HTTP 流量）
+来进行网络请求。-->

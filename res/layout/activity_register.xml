@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity"
+    android:background="#ffffff"> <!-- 设置背景颜色为白色 -->
+
+    <!--
+        背景图：用于显示启动画面的 ImageView。
+        它会覆盖整个父容器，并使用 fitXY 模式拉伸图片以适应视图大小。
+    -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="329dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/splash"/> <!-- 启动画面图像资源 -->
+
+    <!--
+        输入面板：包含登录表单的 LinearLayout。
+        设置了顶部边距以确保它位于屏幕下方适当位置。
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="278dp"
+        android:orientation="vertical">
+        <!--确保输入面板位于启动画面下方-->
+
+        <!--
+            登录表单容器：设置了左右边距、背景样式、垂直居中对齐以及内边距。
+            包含用户名和密码输入框及分隔线。
+        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/shape_login_form"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingRight="31dp"
+            android:paddingLeft="43dp">
+            <!--
+            r40:设置自定义背景形状
+            r41:设置布局方向为垂直
+            r42:设置内容居中对齐
+            r43、44:设置左右内边距
+             -->
+
+            <!--
+                密码输入行：水平排列的 LinearLayout，包含图标和密码输入框。
+                使用 center_vertical 属性使内容在垂直方向上居中对齐。
+            -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/account"/> <!-- 账号图标 -->
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:text="@string/account_hint"
+                    android:textColor="#000000"
+                    android:textColorHint="#bcbcbc"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+            <!--
+                r71:移除默认背景
+                r72:密码提示文本
+            -->
+
+
+            <!-- 分隔线：用于分隔密码输入框和账号输入框 -->
+            <View
+                android:layout_marginTop="23dp"
+                android:layout_marginBottom="23dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider"/> <!-- 浅灰色分隔线 -->
+
+            <!--
+                账号输入行：与密码输入行类似，但包含的是账号图标和账号输入框。
+            -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/pwd"/> <!-- 密码图标 -->
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:text="@string/pwd_hint"
+                    android:textColor="@color/black"
+                    android:textColorHint="#bcbcbc"
+                    android:textSize="18sp"/>
+                <!--
+                    r109:移除默认背景
+                    r110:账号提示文本
+                -->
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 登录按钮：设置边距、背景样式、文字样式等 -->
+        <Button
+            android:layout_marginTop="67dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/shape_big_register_btn"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="24sp"/>
+        <!--
+            r129:自定义背景形状
+            r130:登录按钮文本
+        -->
+    </LinearLayout>
+</RelativeLayout>
